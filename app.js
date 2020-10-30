@@ -9,6 +9,7 @@ const port = 3000;
 
 //pitää olla ennen app.use('/cat'..), etc, muuten ei toimi
 app.use(cors());
+app.use(express.static('uploads'));
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json({type: 'application/*+json'}));
